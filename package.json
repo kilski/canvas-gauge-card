@@ -1,6 +1,6 @@
 {
   "name": "canvas-gauge-card",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lovelace canvas-gauge-card",
   "keywords": [
     "home-assistant",
@@ -12,12 +12,12 @@
     "canvas-gauge"
   ],
   "module": "canvas-gauge-card.js",
-  "repository": "git@github.com:custom_cards/canvas-gauge-card.git",
-  "author": "@helto4real",
+  "repository": "git@github.com:kilski/canvas-gauge-card.git",
+  "author": "@kilski",
   "license": "MIT",
   "dependencies": {
-    "@types/canvas-gauges": "^2.1.2",
-    "canvas-gauges": "^2.1.5",
+    "@types/canvas-gauges": "^2.1.4",
+    "canvas-gauges": "^2.1.7",
     "custom-card-helpers": "^1.6.3",
     "home-assistant-js-websocket": "^4.4.0",
     "lit-html": "^1.1.2",

@@ -121,19 +121,24 @@ export class CanvasGaugeCard extends LitElement {
   // Here we need to refresh the actual gauge after it has rendered
   protected updated(_) {
     var gauge;
+    var previousState = 0;
+    if (this._gauge != undefined)
+    {
+      previousState = this._gauge["value"];
+    }
     if (this._config?.gauge.type == "linear-gauge") {
       gauge = new Gauge.LinearGauge({
         renderTo: this._canvasElement,
         height: this._config.gauge["height"],
         width: this._config.gauge["width"],
-        value: 0,
+        value: previousState,
       });
     } else if (this._config?.gauge.type == "radial-gauge") {
       gauge = new Gauge.RadialGauge({
         renderTo: this._canvasElement,
         height: this._config.gauge["height"],
         width: this._config.gauge["width"],
-        value: 0,
+        value: previousState,
       });
     }
 
