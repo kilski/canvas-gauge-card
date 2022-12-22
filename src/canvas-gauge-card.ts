@@ -122,10 +122,15 @@ export class CanvasGaugeCard extends LitElement {
   protected updated(_) {
     var gauge;
     var previousState = 0;
+
+
     if (this._gauge != undefined)
     {
+      console.info("There are gauge");
       previousState = this._gauge["value"];
+      console.info("Value of gauge:" + previousState)
     }
+
     if (this._config?.gauge.type == "linear-gauge") {
       gauge = new Gauge.LinearGauge({
         renderTo: this._canvasElement,
